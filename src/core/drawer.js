@@ -16,6 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {FirestoreCollection} from "@react-firebase/firestore";
 
 const drawerWidth = 240;
 
@@ -67,7 +68,7 @@ function ResponsiveDrawer(props) {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Inboxxxxx', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
@@ -112,7 +113,7 @@ function ResponsiveDrawer(props) {
           <Hidden smUp implementation="css">
             <Drawer
                 container={container}
-                variant="temporary"
+                variant="permanent"
                 anchor={theme.direction === 'rtl' ? 'right' : 'left'}
                 open={mobileOpen}
                 onClose={handleDrawerToggle}
@@ -165,6 +166,7 @@ function ResponsiveDrawer(props) {
           </Typography>
         </main>
       </div>
+
   );
 }
 
